@@ -1,5 +1,4 @@
 
-
 var nyanCoin = 0;
 
 function nyanClick(number){
@@ -223,14 +222,14 @@ function buyfarm(){
 // Upgrade Item One Start
 var quickfingers = 0;
 function buyQuickfingers(){
-    var quickfingersCost = Math.floor(10 * Math.pow(1.01,quickfingers));   
+    var quickfingersCost = Math.floor(100 * Math.pow(2,quickfingers));   
     if(nyanCoin >= quickfingersCost){                                   
         quickfingers = quickfingers + 1;                                   
     	nyanCoin = nyanCoin - quickfingersCost;                         
         document.getElementById('quickfingers').innerHTML = quickfingers;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(10 * Math.pow(1.01,quickfingers));       
+    var nextCost = Math.floor(100 * Math.pow(2,quickfingers));       
     document.getElementById('quickfingersCost').innerHTML = nextCost;
 	updatenyanperClick();
 };
