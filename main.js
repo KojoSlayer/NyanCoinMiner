@@ -1,14 +1,18 @@
 
-var nyanCoin = 0;
+
+var nyanCoin = 100000000;
 
 function nyanClick(number){
     nyanCoin = nyanCoin + number;
-    document.getElementById("nyanCoin").innerHTML = nyanCoin;
+	var nyanCoinRounded = Math.round(nyanCoin * 100) / 100;
+    document.getElementById("nyanCoin").innerHTML = nyanCoinRounded;
 };
 
 function updatenyanPer(){
-    var nyanPer = (cursors * cursorsCPS) + (oldlaptops * oldlaptopsCPS) + (raspberrypis * raspberrypisCPS) + (cheapdesktops * cheapdesktopsCPS) + (graphicscards * graphicscardsCPS) + (amdcards * amdcardsCPS) + (asicminers * asicminersCPS) + (miningrigs * miningrigsCPS) + (supercomputers * supercomputersCPS) + (shops * shopsCPS) + (farms * farmsCPS);
-    document.getElementById('nyanCoinPer').innerHTML = nyanPer;
+    var nyanPer = (cursors * (cursorsCPS * cursorsPercent)) + (oldlaptops * (oldlaptopsCPS * cleanlaptopsPercent)) + (raspberrypis * (raspberrypisCPS * hirepisPercent)) + (cheapdesktops * cheapdesktopsCPS) + (graphicscards * graphicscardsCPS) + (amdcards * amdcardsCPS) + (asicminers * asicminersCPS) + (miningrigs * miningrigsCPS) + (supercomputers * supercomputersCPS) + (shops * shopsCPS) + (farms * farmsCPS);
+	
+	var nyanPerRounded = Math.round(nyanPer * 100) / 100;
+    document.getElementById('nyanCoinPer').innerHTML = nyanPerRounded;
 };
 
 function updatenyanperClick(){
@@ -30,7 +34,7 @@ function buyCursor(){
     };
     var nextCost = Math.floor(10 * Math.pow(1.05,cursors));       //works out the cost of the next cursor
     document.getElementById('cursorCost').innerHTML = nextCost;  //updates the cursor cost for the user
-	document.getElementById('cursorCPS').innerHTML = cursorsCPSTrue;
+	document.getElementById('cursorCPS').innerHTML = cursorsCPS;
 	updatenyanPer();
 };
 //Shop Item One End
@@ -237,28 +241,121 @@ function buyQuickfingers(){
 
 // Upgrade Item Two Start
 var autoscripts = 0;
+var cursorsPercent = 1;
 function buyautoscripts(){
-    var autoscriptsCost = Math.floor(20 * Math.pow(1.25,autoscripts));   
+    var autoscriptsCost = Math.floor(20 * Math.pow(1.15,autoscripts));   
     if(nyanCoin >= autoscriptsCost){                                   
-        autoscripts = autoscripts + 1;                                   
+        autoscripts = autoscripts + 1; 
+		cursorsPercent = cursorsPercent + 0.1;
     	nyanCoin = nyanCoin - autoscriptsCost;                         
         document.getElementById('autoscripts').innerHTML = autoscripts;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(20 * Math.pow(1.25,autoscripts));       
+    var nextCost = Math.floor(20 * Math.pow(1.15,autoscripts));       
     document.getElementById('autoscriptsCost').innerHTML = nextCost;
-	
+	updatenyanPer();
+
 };
 //Upgrade Item Two End
 
 
+// Upgrade Item Three Start
+var cleanlaptops = 0;
+var cleanlaptopsPercent = 1;
+function buycleanlaptops(){
+    var cleanlaptopsCost = Math.floor(50 * Math.pow(1.20,cleanlaptops));   
+    if(nyanCoin >= cleanlaptopsCost){                                   
+        cleanlaptops = cleanlaptops + 1; 
+		cleanlaptopsPercent = cleanlaptopsPercent + 0.15;
+    	nyanCoin = nyanCoin - cleanlaptopsCost;                         
+        document.getElementById('cleanlaptops').innerHTML = cleanlaptops;  
+        document.getElementById('nyanCoin').innerHTML = nyanCoin; 
+    };
+    var nextCost = Math.floor(50 * Math.pow(1.20,cleanlaptops));       
+    document.getElementById('cleanlaptopsCost').innerHTML = nextCost;
+	updatenyanPer();
+
+};
+//Upgrade Item Three End
+
+
+// Upgrade Item Four Start
+var hirepis = 0;
+var hirepisPercent = 1;
+function buyhirepis(){
+    var hirepisCost = Math.floor(100 * Math.pow(1.20,hirepis));   
+    if(nyanCoin >= hirepisCost){                                   
+        hirepis = hirepis + 1; 
+		hirepisPercent = hirepisPercent + 0.15;
+    	nyanCoin = nyanCoin - hirepisCost;                         
+        document.getElementById('hirepis').innerHTML = hirepis;  
+        document.getElementById('nyanCoin').innerHTML = nyanCoin; 
+    };
+    var nextCost = Math.floor(100 * Math.pow(1.20,hirepis));       
+    document.getElementById('hirepisCost').innerHTML = nextCost;
+	updatenyanPer();
+
+};
+//Upgrade Item Four End
+
+
+//////////////////////////////////////////
+//////////////////////////////////////////
+//////////////////////////////////////////
+
+// Random Item One Start
+var begRedditNumber = 0;
+function begReddit(){
+	begRedditNumber = begRedditNumber + 1;
+	var x = 6;
+	var rand = Math.floor(Math.random()*x) + 1;
+	nyanCoin = nyanCoin + rand;
+    document.getElementById('begRedditNumber').innerHTML = begRedditNumber;  
+	document.getElementById('nyanCoin').innerHTML = nyanCoin; 
+}
+// Random Item One End
+
+
+// Random Item Two Start
+var soloMineNumber = 0;
+function soloMine(){
+	soloMineNumber = soloMineNumber + 1;
+	var soloblock = Math.random() * 999 + 1;
+		if (soloblock < 999){ // 0-999
+			var soloMineNyan = 0;
+			}
+		else { // 999
+			var soloMineNyan = 337;
+			}
+	nyanCoin = nyanCoin + soloMineNyan;
+	document.getElementById('soloMineNumber').innerHTML = soloMineNumber;  
+	document.getElementById('nyanCoin').innerHTML = nyanCoin; 
+}
+// Random Item Two End
+
+// Random Item Three Start
+var poolMineNumber = 0;
+function poolMine(){
+	poolMineNumber = poolMineNumber + 1;
+	var poolblock = Math.random() * 999 + 1;
+		if (poolblock < 990){ // 0-990
+			var poolMineNyan = 0;
+			}
+		else { // 991-999
+			var poolMineNyan = 50;
+			}
+	nyanCoin = nyanCoin + poolMineNyan;
+	document.getElementById('poolMineNumber').innerHTML = poolMineNumber;  
+	document.getElementById('nyanCoin').innerHTML = nyanCoin; 
+}
+// Random Item Three End
 
 //Start Loop
 window.setInterval(function(){
-	
-	nyanClick(cursors * cursorsCPS);
-	nyanClick(oldlaptops * oldlaptopsCPS);
-	nyanClick(raspberrypis * raspberrypisCPS);
+		
+	nyanClick(cursors * (cursorsCPS * cursorsPercent));
+	nyanClick(oldlaptops * (oldlaptopsCPS * cleanlaptopsPercent));
+	nyanClick(raspberrypis * (raspberrypisCPS * hirepisPercent));
 	nyanClick(cheapdesktops * cheapdesktopsCPS);
 	nyanClick(graphicscards * graphicscardsCPS);
 	nyanClick(amdcards * amdcardsCPS);
