@@ -1,6 +1,5 @@
 
-
-var nyanCoin = 100000000;
+var nyanCoin = 0;
 
 function nyanClick(number){
     nyanCoin = nyanCoin + number;
