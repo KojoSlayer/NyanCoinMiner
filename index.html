@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div class="row">
-		<h1 class="text-center">NyanCoin Miner Game v0.07</h1>
+		<h1 class="text-center">NyanCoin Miner Game v0.09</h1>
 		</div>
 		<div class="content">
 			<div class="grid">
@@ -147,16 +147,57 @@
 										<td class="text-center"><span id="quickfingersCost">100</span></td>
 										<td class="text-center"><span id="quickfingersCPS">1</span></td>
 									</tr>   
-									<!---<tr>
+									<tr>
 										<td class="text-center"><button onclick="buyautoscripts()">AutoClicker Script</button></td>
 										<td class="text-center"><span id="autoscripts">0</span></td>
 										<td class="text-center"><span id="autoscriptsCost">20</span></td>
 										<td class="text-center"><span id="autoscriptsCPS">10%</span></td>
-									</tr>  ---> 
-									
+									</tr> 
+									<tr>
+										<td class="text-center"><button onclick="buycleanlaptops()">Clean Your Laptop</button></td>
+										<td class="text-center"><span id="cleanlaptops">0</span></td>
+										<td class="text-center"><span id="cleanlaptopsCost">50</span></td>
+										<td class="text-center"><span id="cleanlaptopsCPS">15%</span></td>
+									</tr> 
+									<tr>
+										<td class="text-center"><button onclick="buyhirepis()">Hire A PI Developer</button></td>
+										<td class="text-center"><span id="hirepis">0</span></td>
+										<td class="text-center"><span id="hirepisCost">100</span></td>
+										<td class="text-center"><span id="hirepiesCPS">15%</span></td>
+									</tr> 									
 									</table>
 								</div>
 							</label>
+							
+							<label class="tab-label">
+								<input class="tab-radio" type="radio" name="page" value="page2" />
+								<div class="tab">Random</div>
+								<div class="tab-page" id="page1">
+									<table>
+									<tr>
+										<th class="text-center">Item</th>
+										<th>Times Tried</th>
+										<th>Possible Nyan Coins</th>
+									</tr>
+									<tr>
+										<td class="text-center"><button onclick="begReddit()">Beg For Tips On Reddit</button></td>
+										<td class="text-center"><span id="begRedditNumber">0</span></td>
+										<td class="text-center"><span id="begRedditPos">1-5</span></td>
+									</tr>   
+									<tr>
+										<td class="text-center"><button onclick="soloMine()">Solo Mine A Block?</button></td>
+										<td class="text-center"><span id="soloMineNumber">0</span></td>
+										<td class="text-center"><span id="soloMinePos">0 Or 337</span></td>
+									</tr> 
+									<tr>
+										<td class="text-center"><button onclick="poolMine()">Pool Mine A Block</button></td>
+										<td class="text-center"><span id="poolMineNumber">0</span></td>
+										<td class="text-center"><span id="poolMinePos">0 or 50</span></td>
+									</tr> 								
+									</table>
+								</div>
+							</label>
+							
 						</div>
 					</div>
 					
