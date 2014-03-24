@@ -24,7 +24,7 @@ function updatenyanperClick(){
 var cursors = 0;
 var cursorsCPS = 0.25;
 function buyCursor(){
-    var cursorCost = Math.floor(10 * Math.pow(1.05,cursors));     //works out the cost of this cursor
+    var cursorCost = Math.floor(50 * Math.pow(1.05,cursors));     //works out the cost of this cursor
     if(nyanCoin >= cursorCost){                                   //checks that the player can afford the cursor
         cursors = cursors + 1;                                   //increases number of cursors
     	nyanCoin = nyanCoin - cursorCost;                          //removes the nyanCoin spent
@@ -33,7 +33,6 @@ function buyCursor(){
     };
     var nextCost = Math.floor(10 * Math.pow(1.05,cursors));       //works out the cost of the next cursor
     document.getElementById('cursorCost').innerHTML = nextCost;  //updates the cursor cost for the user
-	document.getElementById('cursorCPS').innerHTML = cursorsCPS;
 	updatenyanPer();
 };
 //Shop Item One End
@@ -42,16 +41,15 @@ function buyCursor(){
 var oldlaptops = 0;
 var oldlaptopsCPS = 0.50;
 function buyoldlaptop(){
-    var oldlaptopCost = Math.floor(100 * Math.pow(1.025,oldlaptops));   
+    var oldlaptopCost = Math.floor(1000 * Math.pow(1.025,oldlaptops));   
     if(nyanCoin >= oldlaptopCost){                                   
         oldlaptops = oldlaptops + 1;                                   
     	nyanCoin = nyanCoin - oldlaptopCost;                         
         document.getElementById('oldlaptops').innerHTML = oldlaptops;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(100 * Math.pow(1.025,oldlaptops));       
+    var nextCost = Math.floor(1000 * Math.pow(1.025,oldlaptops));       
     document.getElementById('oldlaptopCost').innerHTML = nextCost;
-	document.getElementById('oldlaptopCPS').innerHTML = oldlaptopsCPS;
 	updatenyanPer();
 };
 //Shop Item Two End
@@ -60,16 +58,15 @@ function buyoldlaptop(){
 var raspberrypis = 0;
 var raspberrypisCPS = 1;
 function buyraspberrypi(){
-    var raspberrypiCost = Math.floor(500 * Math.pow(1.050,raspberrypis));   
+    var raspberrypiCost = Math.floor(5000 * Math.pow(1.050,raspberrypis));   
     if(nyanCoin >= raspberrypiCost){                                   
         raspberrypis = raspberrypis + 1;                                   
     	nyanCoin = nyanCoin - raspberrypiCost;                         
         document.getElementById('raspberrypis').innerHTML = raspberrypis;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(500 * Math.pow(1.050,raspberrypis));       
+    var nextCost = Math.floor(5000 * Math.pow(1.050,raspberrypis));       
     document.getElementById('raspberrypiCost').innerHTML = nextCost;
-	document.getElementById('raspberrypisCPS').innerHTML = raspberrypisCPS;
 	updatenyanPer();
 };
 //Shop Item Three End
@@ -78,14 +75,14 @@ function buyraspberrypi(){
 var cheapdesktops = 0;
 var cheapdesktopsCPS = 5;
 function buycheapdesktop(){
-    var cheapdesktopCost = Math.floor(1000 * Math.pow(1.1,cheapdesktops));   
+    var cheapdesktopCost = Math.floor(10000 * Math.pow(1.1,cheapdesktops));   
     if(nyanCoin >= cheapdesktopCost){                                   
         cheapdesktops = cheapdesktops + 1;                                   
     	nyanCoin = nyanCoin - cheapdesktopCost;                         
         document.getElementById('cheapdesktops').innerHTML = cheapdesktops;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(1000 * Math.pow(1.1,cheapdesktops));       
+    var nextCost = Math.floor(10000 * Math.pow(1.1,cheapdesktops));       
     document.getElementById('cheapdesktopCost').innerHTML = nextCost;
 	document.getElementById('cheapdesktopsCPS').innerHTML = cheapdesktopsCPS;
 	updatenyanPer();
@@ -96,14 +93,14 @@ function buycheapdesktop(){
 var graphicscards = 0;
 var graphicscardsCPS = 10;
 function buygraphicscard(){
-    var graphicscardCost = Math.floor(1500 * Math.pow(1.15,graphicscards));   
+    var graphicscardCost = Math.floor(15000 * Math.pow(1.15,graphicscards));   
     if(nyanCoin >= graphicscardCost){                                   
         graphicscards = graphicscards + 1;                                   
     	nyanCoin = nyanCoin - graphicscardCost;                         
         document.getElementById('graphicscards').innerHTML = graphicscards;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(1500 * Math.pow(1.15,graphicscards));       
+    var nextCost = Math.floor(15000 * Math.pow(1.15,graphicscards));       
     document.getElementById('graphicscardCost').innerHTML = nextCost;
 	document.getElementById('graphicscardsCPS').innerHTML = graphicscardsCPS;
 	updatenyanPer();
@@ -114,14 +111,14 @@ function buygraphicscard(){
 var amdcards = 0;
 var amdcardsCPS = 20;
 function buyamdcard(){
-    var amdcardCost = Math.floor(2500 * Math.pow(1.25,amdcards));   
+    var amdcardCost = Math.floor(25000 * Math.pow(1.25,amdcards));   
     if(nyanCoin >= amdcardCost){                                   
         amdcards = amdcards + 1;                                   
     	nyanCoin = nyanCoin - amdcardCost;                         
         document.getElementById('amdcards').innerHTML = amdcards;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(2500 * Math.pow(1.25,amdcards));       
+    var nextCost = Math.floor(25000 * Math.pow(1.25,amdcards));       
     document.getElementById('amdcardCost').innerHTML = nextCost;
 	document.getElementById('amdcardsCPS').innerHTML = amdcardsCPS;
 	updatenyanPer();
@@ -132,14 +129,14 @@ function buyamdcard(){
 var asicminers = 0;
 var asicminersCPS = 40;
 function buyasicminer(){
-    var asicminerCost = Math.floor(15000 * Math.pow(1.30,asicminers));   
+    var asicminerCost = Math.floor(150000 * Math.pow(1.30,asicminers));   
     if(nyanCoin >= asicminerCost){                                   
         asicminers = asicminers + 1;                                   
     	nyanCoin = nyanCoin - asicminerCost;                         
         document.getElementById('asicminers').innerHTML = asicminers;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(15000 * Math.pow(1.30,asicminers));       
+    var nextCost = Math.floor(150000 * Math.pow(1.30,asicminers));       
     document.getElementById('asicminerCost').innerHTML = nextCost;
 	document.getElementById('asicminersCPS').innerHTML = asicminersCPS;
 	updatenyanPer();
@@ -150,14 +147,14 @@ function buyasicminer(){
 var miningrigs = 0;
 var miningrigsCPS = 100;
 function buyminingrig(){
-    var miningrigCost = Math.floor(25000 * Math.pow(1.40,miningrigs));   
+    var miningrigCost = Math.floor(250000 * Math.pow(1.40,miningrigs));   
     if(nyanCoin >= miningrigCost){                                   
         miningrigs = miningrigs + 1;                                   
     	nyanCoin = nyanCoin - miningrigCost;                         
         document.getElementById('miningrigs').innerHTML = miningrigs;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(25000 * Math.pow(1.40,miningrigs));       
+    var nextCost = Math.floor(250000 * Math.pow(1.40,miningrigs));       
     document.getElementById('miningrigCost').innerHTML = nextCost;
 	document.getElementById('miningrigsCPS').innerHTML = miningrigsCPS;
 	updatenyanPer();
@@ -168,14 +165,14 @@ function buyminingrig(){
 var supercomputers = 0;
 var supercomputersCPS = 500;
 function buysupercomputer(){
-    var supercomputerCost = Math.floor(50000 * Math.pow(1.50,supercomputers));   
+    var supercomputerCost = Math.floor(500000 * Math.pow(1.50,supercomputers));   
     if(nyanCoin >= supercomputerCost){                                   
         supercomputers = supercomputers + 1;                                   
     	nyanCoin = nyanCoin - supercomputerCost;                         
         document.getElementById('supercomputers').innerHTML = supercomputers;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(50000 * Math.pow(1.50,supercomputers));       
+    var nextCost = Math.floor(500000 * Math.pow(1.50,supercomputers));       
     document.getElementById('supercomputerCost').innerHTML = nextCost;
 	document.getElementById('supercomputersCPS').innerHTML = supercomputersCPS;
 	updatenyanPer();
@@ -186,14 +183,14 @@ function buysupercomputer(){
 var shops = 0;
 var shopsCPS = 1000;
 function buyshop(){
-    var shopCost = Math.floor(100000 * Math.pow(1.70,shops));   
+    var shopCost = Math.floor(1000000 * Math.pow(1.70,shops));   
     if(nyanCoin >= shopCost){                                   
         shops = shops + 1;                                   
     	nyanCoin = nyanCoin - shopCost;                         
         document.getElementById('shops').innerHTML = shops;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(100000 * Math.pow(1.70,shops));       
+    var nextCost = Math.floor(1000000 * Math.pow(1.70,shops));       
     document.getElementById('shopCost').innerHTML = nextCost;
 	document.getElementById('shopsCPS').innerHTML = shopsCPS;
 	updatenyanPer();
@@ -204,14 +201,14 @@ function buyshop(){
 var farms = 0;
 var farmsCPS = 10000;
 function buyfarm(){
-    var farmCost = Math.floor(1000000 * Math.pow(2,farms));   
+    var farmCost = Math.floor(10000000 * Math.pow(2,farms));   
     if(nyanCoin >= farmCost){                                   
         farms = farms + 1;                                   
     	nyanCoin = nyanCoin - farmCost;                         
         document.getElementById('farms').innerHTML = farms;  
         document.getElementById('nyanCoin').innerHTML = nyanCoin; 
     };
-    var nextCost = Math.floor(1000000 * Math.pow(2,farms));       
+    var nextCost = Math.floor(10000000 * Math.pow(2,farms));       
     document.getElementById('farmCost').innerHTML = nextCost;
 	document.getElementById('farmsCPS').innerHTML = farmsCPS;
 	updatenyanPer();
@@ -252,7 +249,11 @@ function buyautoscripts(){
     };
     var nextCost = Math.floor(20 * Math.pow(1.15,autoscripts));       
     document.getElementById('autoscriptsCost').innerHTML = nextCost;
+	
+	var cursorsCPSTotal = Math.round((cursorsCPS * cursorsPercent) * 100) / 100;
+	document.getElementById('cursorCPS').innerHTML = cursorsCPSTotal;
 	updatenyanPer();
+	
 
 };
 //Upgrade Item Two End
@@ -272,6 +273,9 @@ function buycleanlaptops(){
     };
     var nextCost = Math.floor(50 * Math.pow(1.20,cleanlaptops));       
     document.getElementById('cleanlaptopsCost').innerHTML = nextCost;
+	
+	var cleanlaptopsCPSTotal = Math.round((oldlaptopsCPS * cleanlaptopsPercent) * 100) / 100;
+	document.getElementById('oldlaptopCPS').innerHTML = cleanlaptopsCPSTotal;
 	updatenyanPer();
 
 };
@@ -292,6 +296,9 @@ function buyhirepis(){
     };
     var nextCost = Math.floor(100 * Math.pow(1.20,hirepis));       
     document.getElementById('hirepisCost').innerHTML = nextCost;
+	
+	var hirepisCPSTotal = Math.round((raspberrypisCPS * hirepisPercent) * 100) / 100;
+	document.getElementById('raspberrypisCPS').innerHTML = hirepisCPSTotal;
 	updatenyanPer();
 
 };
@@ -306,9 +313,8 @@ function buyhirepis(){
 var begRedditNumber = 0;
 function begReddit(){
 	begRedditNumber = begRedditNumber + 1;
-	var x = 6;
-	var rand = Math.floor(Math.random()*x) + 1;
-	nyanCoin = nyanCoin + rand;
+	var redditBeg = Math.floor(Math.random()*2) + 1;
+	nyanCoin = nyanCoin + redditBeg;
     document.getElementById('begRedditNumber').innerHTML = begRedditNumber;  
 	document.getElementById('nyanCoin').innerHTML = nyanCoin; 
 }
@@ -323,7 +329,7 @@ function soloMine(){
 		if (soloblock < 999){ // 0-999
 			var soloMineNyan = 0;
 			}
-		else { // 999
+		else { // 1000
 			var soloMineNyan = 337;
 			}
 	nyanCoin = nyanCoin + soloMineNyan;
@@ -340,7 +346,7 @@ function poolMine(){
 		if (poolblock < 990){ // 0-990
 			var poolMineNyan = 0;
 			}
-		else { // 991-999
+		else { // 991-1000
 			var poolMineNyan = 50;
 			}
 	nyanCoin = nyanCoin + poolMineNyan;
